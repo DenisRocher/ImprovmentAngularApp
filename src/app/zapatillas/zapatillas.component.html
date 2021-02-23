@@ -1,7 +1,25 @@
 <h2>{{titulo}}</h2>
+<p>Compra las zapatillas de las mejores marcas</p>
+<select id="marcaSelect">
+  <option *ngFor="let item of marcas" value="{{item}}">{{item}}</option>
+</select>
 <ul>
-    <li>Reebook</li>
-    <li>Adidas</li>
-    <li>Decathlon</li>
-    <li>Nike</li>
+  <li *ngFor="let item of marcas; let indice = index;">{{indice + ' ' +item}}</li>
+</ul>
+
+<ul>
+    <li *ngFor="let item of zapatillas">
+        <span  
+          [ngStyle]="{
+            'text-decoration': !item.stock ? 'line-through':'none'
+          }">
+            {{item.marca}} -- {{item.nombre}} - 
+            <strong>{{item.precio}} CLP</strong>
+        </span>
+        
+        <span *ngIf="item.precio < 60000 && item.stock" [ngStyle]="{'font-color': 'black', 'background-color':'red'}">¡SUPER OFERTA!</span>
+        
+        <span *ngIf="item.stock" 
+          [ngStyle]="{'background-color': item.stock ? 'green' : 'transparent' }">Últimas unidades</span>    
+    </li>
 </ul>

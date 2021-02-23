@@ -316,18 +316,30 @@
     </a>
 </div>
 
-<div class="content" role="main">
+<div class="content" role="main"
+    [ngStyle]="{
+        'background': config.fondo,
+        'padding': '20px',
+        'border': '5px solid ' + config.color
+      }"
+>
 
   <!-- Highlight Card -->
-  <div class="card highlight-card card-small">
-    <span>{{ title }} app está activa!</span>
+  <div class="card highlight-card card-small" 
+    [ngStyle]="{
+        'background-color': config.color
+      }">
+    <span>{{ config.titulo }} app está activa!</span>
   </div>
   <div>
     <h1>Bienvenido</h1>
-    <p>Vamos a perfeccionar Angular</p>
+    <p>{{config.descripcion}}</p>
+
+    <!--
     <button (click)='ocultarMMostrarVideojuegos()'>Ocultar/Mostrar Videojuego</button>
     <br>
     <videojuego *ngIf='mostrar_videojuegos'></videojuego>
+    -->
     <zapatillas></zapatillas>
     <app-cursos></app-cursos>
   </div>
