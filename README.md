@@ -13,8 +13,8 @@ popular
 - [X] Sección 47: Componentes en Angular.
 - [X] Sección 48: Clases y Modelos.
 - [X] Sección 49: Directivas estructurales.
-- [ ] Sección 50: Enlace de datos - Data binding en Angular.
-- [ ] Sección 51: Eventos en Angular.
+- [X] Sección 50: Enlace de datos - Data binding en Angular.
+- [X] Sección 51: Eventos en Angular.
 - [ ] Sección 52: Directiva ngClass de Angular.
 - [ ] Sección 53: Páginas y rutas en Angular.
 - [ ] Sección 54: NgTemplate.
