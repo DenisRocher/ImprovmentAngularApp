@@ -11,8 +11,8 @@ Aprende a programar desde cero y desarrollo web con JavaScript, jQuery, JSON, Ty
 popular
 - [X] Sección 46: Primeros pasos con Angular.
 - [X] Sección 47: Componentes en Angular.
-- [ ] Sección 48: Clases y Modelos.
-- [ ] Sección 49: Directivas estructurales.
+- [X] Sección 48: Clases y Modelos.
+- [X] Sección 49: Directivas estructurales.
 - [ ] Sección 50: Enlace de datos - Data binding en Angular.
 - [ ] Sección 51: Eventos en Angular.
 - [ ] Sección 52: Directiva ngClass de Angular.

@@ -23,3 +23,16 @@
           [ngStyle]="{'background-color': item.stock ? 'green' : 'transparent' }">Últimas unidades</span>    
     </li>
 </ul>
+<p>El color de la mayoria de las zapatillas es:</p>
+<ul [ngSwitch]="color">
+  <li *ngSwitchCase="'yellow'">
+    El color es <span [ngStyle]="{'color': color}">{{color}}</span></li>
+  <li *ngSwitchCase="'red'">
+        El color es <span [ngStyle]="{'color': color}">{{color}}</span></li>
+  <li *ngSwitchCase="'white'">
+        El color es <span [ngStyle]="{'color': color}">{{color}}</span></li>
+  <li *ngSwitchCase="'orange'">
+        El color es <span [ngStyle]="{'color': color}">{{color}}</span></li>
+  <li *ngSwitchDefault>Sin color definido</li>
+</ul>
+
