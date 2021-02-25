@@ -22,12 +22,19 @@
         <span  
           [ngStyle]="{
             'text-decoration': !item.stock ? 'line-through':'none'
-          }">
+          }"
+          [ngClass]="{ 
+            altoPrecio: item.precio >=99999, 
+            'fondorojo subrayado': item.precio >=120999
+          }"
+          >
             {{item.marca}} -- {{item.nombre}} - 
             <strong>{{item.precio}} CLP</strong>
         </span>
         
-        <span *ngIf="item.precio < 60000 && item.stock" [ngStyle]="{'font-color': 'black', 'background-color':'red'}">¡SUPER OFERTA!</span>
+        <span *ngIf="item.precio < 60000 && item.stock" 
+          [ngStyle]="{'font-color': 'black', 'background-color':'red'}"
+        >¡SUPER OFERTA!</span>
         
         <span *ngIf="item.stock" 
           [ngStyle]="{'background-color': item.stock ? 'green' : 'transparent' }">Últimas unidades</span>    

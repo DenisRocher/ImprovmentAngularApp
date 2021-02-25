@@ -3,7 +3,9 @@ import { Zapatilla } from '../models/zapatilla';
 
 @Component({
     selector: 'zapatillas',
-    templateUrl: './zapatillas.component.html'
+    templateUrl: './zapatillas.component.html',
+    styleUrls: ['./zapatillas.component.sass']
+    
 })
 export class ZapatillasComponent implements OnInit{
   public titulo: string = 'Componente de zapatilla';
