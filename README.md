@@ -16,8 +16,8 @@ popular
 - [X] Sección 50: Enlace de datos - Data binding en Angular.
 - [X] Sección 51: Eventos en Angular.
 - [X] Sección 52: Directiva ngClass de Angular.
-- [ ] Sección 53: Páginas y rutas en Angular.
-- [ ] Sección 54: NgTemplate.
+- [X] Sección 53: Páginas y rutas en Angular.
+- [X] Sección 54: NgTemplate.
 - [ ] Sección 55: Servicios, HTTP y AJAX en Angular.
 - [ ] Sección 56: Pipes.
 - [ ] Sección 57: Formularios en Angular.

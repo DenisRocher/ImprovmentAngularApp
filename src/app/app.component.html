@@ -26,7 +26,6 @@
       </svg>
     </a>
 </div>
-
 <div class="content" role="main"
     [ngStyle]="{
         'background': config.fondo,
@@ -34,6 +33,12 @@
         'border': '5px solid ' + config.color
       }"
 >
+  <nav class="menu">
+    <a [routerLink]="['/home']" routerLinkActive="router-link-active" >Home</a>
+    <a [routerLink]="['/zapatillas']" routerLinkActive="router-link-active" >Zapatillas</a>
+    <a [routerLink]="['/videojuego']" routerLinkActive="router-link-active" >Videojuego</a>
+    <a [routerLink]="['/cursos']" routerLinkActive="router-link-active" >Cursos</a>
+  </nav>
 
   <!-- Highlight Card -->
   <div class="card highlight-card card-small" 
@@ -50,9 +55,9 @@
     <button (click)='ocultarMMostrarVideojuegos()'>Ocultar/Mostrar Videojuego</button>
     <br>
     <videojuego *ngIf='mostrar_videojuegos'></videojuego>
-    -->
     <zapatillas></zapatillas>
     <app-cursos></app-cursos>
+    -->
   </div>
 
-  
+  <router-outlet></router-outlet>

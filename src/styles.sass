@@ -40,10 +40,38 @@ p
   color           : white
   font-weight     : 600
 
+  /** Formato Cabecera Men */
+
+.menu 
+  height : 80px 
+  display : block 
+  transition: all 300ms
+
+.menu a
+  font-family   : Arial, Helvetica, sans-serif
+  background    : white
+  width         : 100%
+  text-transform: uppercase
+  margin-bottom : 20px
+  line-height: 60px 
+  list-style : none
+  text-decoration: none 
+  padding-left : 30px 
+  padding-top: 10px
+  padding-bottom: 10px
+  padding-right : 30px
+
+.menu a:hover 
+  background: #655dcf
+  color: white
+
+.menu .router-link-active
+  border: 3px solid  #655dcf
+  background: #2e22db !important
+  color: white
 
 .toolbar img 
   margin: 0 16px
-
 
 .toolbar #twitter-logo 
   height: 40px
@@ -56,17 +84,15 @@ p
 
 .content 
   display       : flex
-  margin        : 82px auto 32px
+  margin        : 82px 
   padding       : 0 16px
-  max-width     : 960px
+  max-width     : 90%
   flex-direction: column
-  align-items   : center
 
 
 svg.material-icons 
   height: 24px
   width : auto
-
 
 svg.material-icons:not(:last-child) 
   margin-right: 8px

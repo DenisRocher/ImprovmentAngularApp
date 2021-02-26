@@ -1,0 +1,13 @@
+<h2>Página Principal</h2>
+<div *ngIf="identificado; then login else logout">
+</div>
+
+<ng-template #logout>
+  <h4>No estás logeado, pulsa el siguiente botón</h4>
+  <button (click)='setLogin()'>Logearse</button>
+</ng-template>
+
+<ng-template #login>
+  <h4>Estás logeado en la aplicación</h4>
+  <button (click)='setLogout()'>Salir</button>
+</ng-template>
