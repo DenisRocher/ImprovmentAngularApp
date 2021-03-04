@@ -21,8 +21,8 @@ export class CursosComponent implements OnInit {
     this._route.params.subscribe((params: Params) => {
       this.nombre = params.nombre;
       this.followers = +params.followers;
-      console.log(params);
-      console.log(this.nombre);
+      //console.log(params);
+      //console.log(this.nombre);
 
       if (this.nombre == 'ninguno') {
             this._router.navigate(['/home']);

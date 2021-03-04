@@ -1,0 +1,19 @@
+<input type="text" [(ngModel)]="userId" (keyup.enter)='cargarUsuario()'>
+
+
+<div *ngIf="!user && resultOK">
+    <img src="https://media.giphy.com/media/3oEjI6SIIHBdRxXI40/giphy.gif"/>
+</div>
+<div *ngIf="user">
+  <h1>Usuario Request</h1>
+  <img src="{{user.avatar}}" alt="Avatar Usuario">
+  <br>
+  <h2>Nombre: {{user.first_name +' '+user.last_name}} </h2>
+  <SPAN><strong>Contacto: </strong>{{user.email}} </SPAN>
+  <BR>
+  <br>
+</div>
+<div *ngIf="!resultOK">
+  <h1>Usuario Request</h1>
+  <h3>No existe el usuario con Id: {{userId}}</h3>
+</div>

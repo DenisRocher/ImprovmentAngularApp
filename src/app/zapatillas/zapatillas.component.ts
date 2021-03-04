@@ -1,11 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { Zapatilla } from '../models/zapatilla';
+import { ZapatillaService } from '../services/zapatilla.service';
 
 @Component({
-    selector: 'zapatillas',
-    templateUrl: './zapatillas.component.html',
-    styleUrls: ['./zapatillas.component.sass']
-    
+  selector: 'zapatillas',
+  templateUrl: './zapatillas.component.html',
+  styleUrls: ['./zapatillas.component.sass'],
+  providers: [ZapatillaService]
 })
 export class ZapatillasComponent implements OnInit{
   public titulo: string = 'Componente de zapatilla';
@@ -14,16 +15,24 @@ export class ZapatillasComponent implements OnInit{
   public color: string;
   public miMarca: string;
 
-  constructor() {
+  constructor(
+    private _zapatillaService: ZapatillaService //Permite inyectar el servicio
+                                               //como propiedad del método.
+                                                // _aaa "_" previo a servicio 
+    )
+    {
     this.color = 'white';
     this.miMarca = '';
     this.marcas = new Array;
-    this.zapatillas = [
-      new Zapatilla('RunnerFull', 50000, 'Adidas', 'Blue', true),
-      new Zapatilla('RunnerSlow', 20000, 'Nike', 'Red', false),
-      new Zapatilla('RunnerXtreme', 100000, 'Decathlon', 'Green', false),
-      new Zapatilla('RunnerXtreme2', 150000, 'Decathlon', 'Grey', true),
-    ];
+    this.zapatillas = this._zapatillaService.getZapatillas();
+    //console.log(this._zapatillaService.getTest());
+    /** this.zapatillas = [
+    *  new Zapatilla('RunnerFull', 50000, 'Adidas', 'Blue', true),
+    *  new Zapatilla('RunnerSlow', 20000, 'Nike', 'Red', false),
+    *  new Zapatilla('RunnerXtreme', 100000, 'Decathlon', 'Green', false),
+    *  new Zapatilla('RunnerXtreme2', 150000, 'Decathlon', 'Grey', true)
+    *];
+    */
   }
   
   ngOnInit() {
