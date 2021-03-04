@@ -18,7 +18,7 @@ popular
 - [X] Sección 52: Directiva ngClass de Angular.
 - [X] Sección 53: Páginas y rutas en Angular.
 - [X] Sección 54: NgTemplate.
-- [ ] Sección 55: Servicios, HTTP y AJAX en Angular.
+- [X] Sección 55: Servicios, HTTP y AJAX en Angular.
 - [ ] Sección 56: Pipes.
 - [ ] Sección 57: Formularios en Angular.
   
