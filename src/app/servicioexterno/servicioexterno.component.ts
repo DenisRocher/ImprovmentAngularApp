@@ -12,14 +12,17 @@ export class ServicioexternoComponent implements OnInit {
   public user: any;
   public userId: any;
   public resultOK: any;
+  public fecha: any;
 
   constructor(private _peticionesService: PeticionesService) { 
-    this.userId = 1;
-    this.resultOK = false;
+
   };
 
   ngOnInit(): void {
+    this.userId = 1;
+    this.resultOK = false;
     this.cargarUsuario();
+    this.fecha = Date.now();
   }
 
   cargarUsuario() {

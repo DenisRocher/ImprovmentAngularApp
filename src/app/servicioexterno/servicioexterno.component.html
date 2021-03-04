@@ -1,6 +1,17 @@
+<hr>
+{{fecha | date: 'fullDate'}}
+<br>
+{{fecha | date: 'dd LLL yyyy' | uppercase}}
+<br>
+{{fecha | date:'HH:mm:ss'}}
+<br>
+{{'HOLA MUNDO USANDO PIPES' | lowercase}} 
+<br>
+{{4 | calculadora: 2}}
+<hr>
+<br>
 <input type="text" [(ngModel)]="userId" (keyup.enter)='cargarUsuario()'>
-
-
+<hr>
 <div *ngIf="!user && resultOK">
     <img src="https://media.giphy.com/media/3oEjI6SIIHBdRxXI40/giphy.gif"/>
 </div>
