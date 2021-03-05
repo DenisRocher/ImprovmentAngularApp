@@ -17,9 +17,10 @@ popular
 - [X] Sección 51: Eventos en Angular.
 - [X] Sección 52: Directiva ngClass de Angular.
 - [X] Sección 53: Páginas y rutas en Angular.
-- [X] Sección 54: NgTempX] Sección 55: Servicios, HTTP y AJAX en Angular.
+- [X] Sección 54: NgTemplate 
+- [X] Sección 55: Servicios, HTTP y AJAX en Angular.
 - [X] Sección 56: Pipes.
-- [ ] Sección 57: Formularios en Angular.
+- [X] Sección 57: Formularios en Angular.
   
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.1.

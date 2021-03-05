@@ -13,9 +13,15 @@ export class ServicioexternoComponent implements OnInit {
   public userId: any;
   public resultOK: any;
   public fecha: any;
+  public newUser: any;
+  public newUserOK: any;
 
   constructor(private _peticionesService: PeticionesService) { 
-
+    this.newUserOK = false;
+    this.newUser = {
+      'name': '',
+      'job': ''
+    };
   };
 
   ngOnInit(): void {
@@ -23,6 +29,7 @@ export class ServicioexternoComponent implements OnInit {
     this.resultOK = false;
     this.cargarUsuario();
     this.fecha = Date.now();
+
   }
 
   cargarUsuario() {
@@ -36,6 +43,21 @@ export class ServicioexternoComponent implements OnInit {
       error => {
         console.log(<any>error);
         this.resultOK = error.ok;
+      }
+    );
+  }
+
+  onSubmit(form: any) {
+    this._peticionesService.addUser(this.newUser).subscribe(
+      response => {
+        //console.log(result);
+        console.log(response);
+        this.newUserOK = response;
+        form.reset();
+      },
+      error => {
+        console.log(<any>error);
+        this.newUserOK = false;
       }
     );
   }

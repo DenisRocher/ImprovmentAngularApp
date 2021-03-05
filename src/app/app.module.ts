@@ -16,6 +16,7 @@ import { CursosComponent } from './cursos/cursos.component';
 import { HomeComponent } from './home/home.component';
 import { ServicioexternoComponent } from './servicioexterno/servicioexterno.component';
 import { CalculadorPipe } from './pipes/calculadora.pipe';
+import { ContactoComponent } from './contacto/contacto.component';
 
 
 @NgModule({
@@ -26,7 +27,8 @@ import { CalculadorPipe } from './pipes/calculadora.pipe';
     CursosComponent,
     HomeComponent,
     ServicioexternoComponent,
-    CalculadorPipe
+    CalculadorPipe,
+    ContactoComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,50 @@
+<h2>Formulario de Contacto</h2>
+<form #formContacto='ngForm' (ngSubmit)='onSubmit(formContacto)'  >
+  <label for="firt_name">Nombre</label>
+  <br>
+  <input type="text" name="first_name" placeholder="Nombre" 
+    required pattern="[a-zA-Z]+"
+    #first_name="ngModel" [(ngModel)]="msjUsuario.first_name" >
+    <span *ngIf="first_name.touched && !first_name.valid">
+      El nombre es obligatorio
+    </span>
+  <br>
+  <label for="last_name">Apellidos</label>
+  <br>
+  <input type="text" name="last_name" placeholder="Apellidos"
+    required pattern="[a-zA-Z]+"
+    #last_name="ngModel" [(ngModel)]="msjUsuario.last_name" >  
+    <span *ngIf="last_name.touched && !last_name.valid">
+      El campo Apellidos es obligatorio
+    </span>
+  <br>
+  <label for="email">Email</label>
+  <br>
+  <input type="email" name="email" placeholder="aaa@zzz.yy" 
+    required
+    #email="ngModel" [(ngModel)]="msjUsuario.email" >
+    <span *ngIf="email.touched && !email.valid">
+      El Email es obligatorio
+    </span>
+  <br>
+  <label for="object">Asunto</label>
+  <br>
+  <input type="text" name="subject" placeholder="Asunto"
+    required
+    #subject="ngModel" [(ngModel)]="msjUsuario.subject" > 
+    <span *ngIf="subject.touched && !subject.valid">
+      El asunto es obligatorio
+    </span> 
+  <br>
+  <label for="message">Mensaje</label>
+  <br>
+  <textarea name="message" id="" cols="30" rows="10" placeholder="Su mensaje"
+    required
+    #message="ngModel" [(ngModel)]="msjUsuario.message" ></textarea>
+    <span *ngIf="message.touched && !message.valid">
+      El mensaje de contacto es obligatorio
+    </span>
+  <br>
+  <input type="submit" value="Enviar" [disabled]='!formContacto.form.valid'
+  >
+ </form>

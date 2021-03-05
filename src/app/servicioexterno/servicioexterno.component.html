@@ -28,3 +28,37 @@
   <h1>Usuario Request</h1>
   <h3>No existe el usuario con Id: {{userId}}</h3>
 </div>
+
+<hr>
+<h2>Creación de usuario</h2>
+<form #formAddUser='ngForm' (ngSubmit)= onSubmit(formAddUser) >
+  <label for="name">Nombre</label>
+  <p>
+  <br>
+  <input type="text" name="name" placeholder="Nombre" 
+    required pattern="[a-zA-Z ]+"
+    #name="ngModel" [(ngModel)]="newUser.name" >
+    <span *ngIf="name.touched && !name.valid">
+      El Nombre no es válido
+    </span>  </p>
+  <br>
+  <p>
+  <label for="job">Cargo</label>
+  <br>
+  <input type="text" name="job" placeholder="Cargo"
+    required pattern="[a-zA-Z ]+"
+    #job="ngModel" [(ngModel)]="newUser.job" >
+    <span *ngIf="job.touched && !job.valid">
+      El Cargo no es válido
+    </span>
+  </p>
+  <br>
+  <br>
+  <input type="submit" value="Dar de Alta Usuario" [disabled]="!formAddUser.form.valid">
+</form>
+<div *ngIf="newUserOK">
+  <h3>Se ha creado correctamente el usuario</h3>
+  <h2>{{newUserOK.name}}</h2>
+</div>
+
+<hr>
